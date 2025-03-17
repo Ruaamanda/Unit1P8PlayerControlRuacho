@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class OncomingVehicle : MonoBehaviour
 {
-    public float speed = 15.0f;
+    public int speed; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,6 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.back * Time.deltaTime * speed);
-        
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 }
